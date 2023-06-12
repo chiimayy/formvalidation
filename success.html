@@ -5,16 +5,23 @@
     <body>
         <h2>FORM SUCCESS</h2>
         <h3>Details of the form:</h3>
+        <p>Fullname is:<p>
         <p class="fullnameres" id="fnameres"></p>
+        <p>Email is:</p>
         <p class="emailres" id="emailres"></p>
+        <p>Department is:</p>
         <p class="dropdownres" id="dropdownres"></p>
+        <p>Feedback is:</p>
         <p class="feedbackres" id="feedbackres"></p>
+        <p>How statisfactory:</p>
+        <p class="radiores" id="radiores"></p>
 
         <script>
             document.getElementById("fnameres").innerHTML=localStorage.getItem("textvalue");
             document.getElementById("emailres").innerHTML=localStorage.getItem("emailvalue");
             document.getElementById("dropdownres").innerHTML=localStorage.getItem("ddvalue");
             document.getElementById("feedbackres").innerHTML=localStorage.getItem("feedback");
+            document.getElementById("radiores").innerHTML=localStorage.getItem("selectedvalue");
         </script>
     </body>
 
