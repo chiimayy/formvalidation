@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="form.css" type="text/css">
+        
+    </head>
+    <body>
+        <div class="formbox" id="formbox">
+        <form style="font-family:'Open Sans',sans-serif" action="success.html">
+            <label for="fullname">Fullname:</label>
+            <input type="text" id="fullname">
+           <!---- <span id="email-error">error message</span>-->
+            <br><br>
+           <label for="email">Email:</label>
+            <input type="email" id="email" spellcheck="false" onkeyup="isValidEmail()"><br>
+            <span id="email-error">error message</span>
+            <br><br>
+            <label for="dropdown">Department:</label>
+            <select id="dropdown" name="dropdown">
+                <option value="select department">select department</option>
+                <option value="sales">Sales</option>
+                <option value="finance">Finance</option>
+                <option value="associates">Associates</option>
+                <option value="attorney">Attorney</option>
+                <option value="technician">Technician</option>
+                <option value="admin">Admin</option>
+                <option value="peon">Peon</option>
+            </select>
+            <br><br>
+            <label for="radio">satisfactory of current management</label><br>
+            <input type="radio" id="radio-1" name="radio-group" value="radio-1" checked>
+            <label for="radio-1">1</label>
+            <input type="radio" id="radio-2" name="radio-group" value="radio-2">
+            <label for="radio-2">2</label>
+            <input type="radio" id="radio-3" name="radio-group" value="radio-3">
+            <label for="radio-3">3</label>
+            <input type="radio" id="radio-4" name="radio-group" value="radio-4">
+            <label for="radio-4">4</label>
+            <input type="radio" id="radio-5" name="radio-group" value="radio-5">
+            <label for="radio-5">5</label>
+            <br><br>
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" rows="4" cols="50"></textarea>
+            <br><br>
+            <label for="checkbox">Agree to the privacy policy:</label>
+            <input type="checkbox" id="checkbox">
+            <br><br>
+            <input type="submit" id="submit" value="submit" onclick="showsuccess();">
+        </form>
+        </div>
+        <script>
+            var emailfield=document.getElementById("email");
+            var emailerror=document.getElementById("email-error");
+            function isValidEmail(){
+                if(!emailfield.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+                    emailerror.innerHTML="Please enter valid email";
+                    emailfield.style.borderBottomColor="red";
+                    emailerror.style.top="120%";
+                    return false
+                }
+                else{
+                    emailerror.innerHTML="";
+                }
+            }
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>

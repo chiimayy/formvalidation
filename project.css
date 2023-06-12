@@ -1,0 +1,16 @@
+.formbox{
+    width:50%;
+    margin:20px;
+    padding:20px;
+    box-shadow:1px 2px 10px 5px brown;
+    background-color:lightseagreen;
+}
+form{
+    margin:auto;
+    ;
+}
+.output{
+    width:30%;
+    height:30%;
+    margin:auto;
+}
