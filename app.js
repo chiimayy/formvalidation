@@ -9,5 +9,12 @@ function showsuccess()
     localStorage.setItem("ddvalue",dropval);
     var feedvalue=document.getElementById('feedback').value;
     localStorage.setItem("feedback",feedvalue);
+    var radiovalue=document.getElementsByName('radio-group');
+    for(i=0;i<radiovalue.length;i++)
+    {
+        if(radiovalue[i].checked)
+            var selectedvalue=radiovalue[i].value;
+    }
+    localStorage.setItem("selectedvalue",selectedvalue);
     return false;
 }
